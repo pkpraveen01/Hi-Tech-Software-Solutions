@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import './Home.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [counter, setCounter] = useState({ clients: 0, projects: 0, countries: 0 });
@@ -44,9 +43,9 @@ const Home = () => {
           <p className="home-subtitle">
             Powering businesses through full-stack web and mobile app development.
           </p>
-          <Link to="/contact" className="home-button">Let's Talk</Link>
+          {/* <a href="/contact" className="home-button">Let's Talk</a> */}
         </div>
-
+        {/* Floating SVG shapes */}
         <div className="floating-shapes">
           <span className="circle"></span>
           <span className="triangle"></span>
@@ -54,6 +53,7 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Achievements */}
       <div className="section achievements" data-aos="fade-up">
         <h2>Our Achievements</h2>
         <div className="counter-grid">
@@ -72,6 +72,7 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Services */}
       <div className="section services" data-aos="fade-up">
         <h2>Our Services</h2>
         <div className="service-grid">
@@ -90,6 +91,7 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Industries */}
       <div className="section industries" data-aos="fade-right">
         <h2>Industries We Serve</h2>
         <ul className="industry-list">
@@ -102,24 +104,44 @@ const Home = () => {
         </ul>
       </div>
 
-      <div className="section portfolio" data-aos="fade-left">
-        <h2>Our Recent Projects</h2>
-        <div className="portfolio-grid">
-          <a href="https://gym-app-6-8cxv.onrender.com/" target="_blank" rel="noopener noreferrer" className="portfolio-item">
-            <img src="/gym-app.png" alt="Gym Website" />
-            <p>Gym Website – Fitness Platform</p>
-          </a>
-          <a href="https://surya-vision.onrender.com/" target="_blank" rel="noopener noreferrer" className="portfolio-item">
-            <img src="/surya-vision.png" alt="Surya Vision E-commerce" />
-            <p>Surya Vision – E-commerce Web App</p>
-          </a>
-          <a href="https://hi-tech-hospital.onrender.com/" target="_blank" rel="noopener noreferrer" className="portfolio-item">
-            <img src="/hi-tech.png" alt="Hospital Management System" />
-            <p>Hi-Tech Hospital – Management System</p>
-          </a>
-        </div>
-      </div>
+     {/* Portfolio */}
+<div className="section portfolio" data-aos="fade-left">
+  <h2>Our Recent Projects</h2>
+  <div className="portfolio-grid">
+    <a
+      href="https://gym-app-6-8cxv.onrender.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="portfolio-item"
+    >
+      <img src="/gym-app.png" alt="Gym Website" />
+      <p>Gym Website – Fitness Platform</p>
+    </a>
 
+    <a
+      href="https://surya-vision.onrender.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="portfolio-item"
+    >
+      <img src="/surya-vision.png" alt="Surya Vision E-commerce" />
+      <p>Surya Vision – E-commerce Web App</p>
+    </a>
+
+    <a
+      href="https://hi-tech-hospital.onrender.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="portfolio-item"
+    >
+      <img src="/hi-tech.png" alt="Hospital Management System" />
+      <p>Hi-Tech Hospital – Management System</p>
+    </a>
+  </div>
+</div>
+
+
+      {/* Testimonials */}
       <div className="section testimonials" data-aos="zoom-in">
         <h2>What Our Clients Say</h2>
         <div className="testimonial">
@@ -132,17 +154,20 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Tech Stack */}
       <div className="section tech-stack" data-aos="fade-up">
         <h2>Technologies We Work With</h2>
         <p>MERN • Next.js • Firebase • AWS • Docker • GraphQL • Stripe • GitHub Actions</p>
       </div>
 
+      {/* Call to Action */}
       <div className="section cta" data-aos="fade-up">
         <h2>Ready to Start Your Project?</h2>
         <p>Let’s discuss your requirements and turn your ideas into reality.</p>
-        <Link to="/contact" className="home-button">Get In Touch</Link>
+        <a href="/contact" className="home-button">Get In Touch</a>
       </div>
 
+      {/* WhatsApp and Call Floating Buttons */}
       <div className="floating-contact-buttons">
         <a
           href="https://wa.me/917260019502"
