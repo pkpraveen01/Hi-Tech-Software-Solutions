@@ -40,7 +40,7 @@ const Contact = () => {
     if (file) data.append('file', file);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/contact', data, {
+      const res = await axios.post('https://hi-tech-software-solutions-14na.onrender.com//api/contact', data, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setStatus({ type: 'success', message: res.data.message || 'Message sent successfully!' });
