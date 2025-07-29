@@ -1,0 +1,248 @@
+/* Base Section Styling */
+.services-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #0f172a;
+  background: linear-gradient(to bottom, #f8fafc, #e0f2fe);
+  padding: 0;
+  margin: 0;
+}
+
+/* Hero Section */
+.hero-services {
+  text-align: center;
+  padding: 80px 20px 40px;
+  background-color: #1e3a8a;
+  color: #ffffff;
+}
+
+.hero-services h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-services p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Services Intro */
+.services-intro {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.services-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.services-intro p {
+  font-size: 1rem;
+  color: #475569;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Services Section */
+.services-section {
+  padding: 40px 20px 80px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.service-icon {
+  font-size: 2rem;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.service-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* Technology Section */
+.technology-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f1f5f9;
+}
+
+.technology-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.technology-section p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.tech-tags span {
+  background-color: #e2e8f0;
+  color: #1e293b;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+  background: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.why-choose-us ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.why-choose-us li {
+  font-size: 1rem;
+  color: #0f172a;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: #1d4ed8;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cta-section p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: white;
+  color: #1d4ed8;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e0e7ff;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .hero-services h1 {
+    font-size: 2rem;
+  }
+
+  .services-intro h2,
+  .technology-section h2,
+  .why-choose-us h2,
+  .cta-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .tech-tags {
+    gap: 8px;
+  }
+
+  .tech-tags span {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-services h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-services p,
+  .services-intro p,
+  .service-description,
+  .why-choose-us li,
+  .cta-section p {
+    font-size: 0.95rem;
+  }
+
+  .service-title {
+    font-size: 1.1rem;
+  }
+
+  .service-image {
+    height: 160px;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
