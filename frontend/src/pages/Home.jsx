@@ -103,8 +103,7 @@ const Home = () => {
           <li>📱 Social Media</li>
         </ul>
       </div>
-
-     {/* Portfolio */}
+      {/* Portfolio */}
 <div className="section portfolio" data-aos="fade-left">
   <h2>Our Recent Projects</h2>
   <div className="portfolio-grid">
@@ -136,6 +135,17 @@ const Home = () => {
     >
       <img src="/hi-tech.png" alt="Hospital Management System" />
       <p>Hi-Tech Hospital – Management System</p>
+    </a>
+
+    {/* New Project: Surya Solar System */}
+    <a
+      href="https://surya-solar-system01.onrender.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="portfolio-item"
+    >
+      <img src="/surya-solar-system.png" alt="Surya Solar System" />
+      <p>Surya Solar System – Solar Energy Solutions</p>
     </a>
   </div>
 </div>
