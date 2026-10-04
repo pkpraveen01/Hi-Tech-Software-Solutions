@@ -15,12 +15,31 @@ const app = express();
 // CORS
 // =====================================================
 
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://127.0.0.1:5173',
+  process.env.FRONTEND_URL,
+].filter(Boolean);
+
 app.use(
   cors({
-    origin: [
-      'http://localhost:5173',
-      'http://127.0.0.1:5173',
-    ],
+    origin: (origin, callback) => {
+      // Allow requests without an Origin header
+      // such as Postman/server-to-server requests
+      if (!origin) {
+        return callback(null, true);
+      }
+
+      // Allow configured origins
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      // Temporary fallback for deployed frontend
+      // while production domain is being configured
+      return callback(null, true);
+    },
+
     methods: [
       'GET',
       'POST',
@@ -29,6 +48,7 @@ app.use(
       'DELETE',
       'OPTIONS',
     ],
+
     allowedHeaders: [
       'Content-Type',
       'Authorization',
@@ -125,7 +145,7 @@ mongoose
 
     app.listen(PORT, () => {
       console.log(
-        `🚀 Server running on http://localhost:${PORT}`
+        `🚀 Server running on port ${PORT}`
       );
     });
   })
