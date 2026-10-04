@@ -39,6 +39,7 @@ const Home = () => {
 return (
   <section className="home-section">
     <div className="overlay">
+
       <div className="home-content">
 
         <h1 className="home-title" ref={titleRef}></h1>
@@ -47,6 +48,7 @@ return (
           Powering businesses through full-stack web and mobile app development.
         </p>
 
+        {/* Developer Name */}
         <p className="developer-name">
           <span>Er. Praveen Kumar</span>
         </p>
@@ -63,9 +65,7 @@ return (
       </div>
 
     </div>
-  </section>
-);
-
+  
 
 
       {/* Achievements */}
