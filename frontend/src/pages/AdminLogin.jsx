@@ -10,16 +10,32 @@ const AdminLogin = () => {
   const [error, setError] = useState('');
 
   const handleLogin = (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    // Temporary login credentials
-    if (username === 'admin' && password === 'admin123') {
-      setError('');
-      navigate('/admin/dashboard');
-    } else {
-      setError('Invalid username or password');
-    }
-  };
+  const validAdmins = [
+    {
+      username: 'admin',
+      password: 'admin123',
+    },
+    {
+      username: 'py77750@gmail.com',
+      password: '1234567890',
+    },
+  ];
+
+  const isValidAdmin = validAdmins.some(
+    (admin) =>
+      admin.username === username &&
+      admin.password === password
+  );
+
+  if (isValidAdmin) {
+    setError('');
+    navigate('/admin/dashboard');
+  } else {
+    setError('Invalid username or password');
+  }
+};
 
   return (
     <div className="admin-login-page">
