@@ -1,0 +1,190 @@
+.study-material-page {
+  min-height: calc(100vh - 140px);
+  padding: 50px 20px;
+  background: #f8fafc;
+  box-sizing: border-box;
+}
+
+.study-material-header {
+  max-width: 1100px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.study-material-header h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 2.2rem;
+}
+
+.study-material-header p {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.class-filter {
+  max-width: 1100px;
+  margin: 0 auto 35px;
+}
+
+.class-filter label {
+  display: block;
+  margin-bottom: 8px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.class-filter select {
+  width: 100%;
+  max-width: 350px;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.materials-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.material-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08);
+}
+
+.pdf-icon {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.material-info {
+  flex: 1;
+}
+
+.material-info h2 {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 18px;
+}
+
+.material-info p {
+  margin: 0 0 8px;
+  color: #0284c7;
+  font-weight: 600;
+}
+
+.material-info small {
+  display: block;
+  color: #64748b;
+  word-break: break-word;
+}
+
+.material-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.view-button,
+.download-button {
+  flex: 1;
+  padding: 11px 12px;
+  border-radius: 7px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.view-button {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.download-button {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.view-button:hover {
+  background: #1e293b;
+}
+
+.download-button:hover {
+  background: #bae6fd;
+}
+
+.material-status {
+  max-width: 1100px;
+  margin: 30px auto;
+  text-align: center;
+  color: #64748b;
+}
+
+.material-error {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fee2e2;
+  color: #b91c1c;
+  text-align: center;
+}
+
+.no-materials {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px 20px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.no-material-icon {
+  font-size: 50px;
+}
+
+.no-materials h2 {
+  color: #0f172a;
+}
+
+.no-materials p {
+  color: #64748b;
+}
+
+@media (max-width: 900px) {
+  .materials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .study-material-page {
+    padding: 35px 15px;
+  }
+
+  .study-material-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .materials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .material-actions {
+    flex-direction: column;
+  }
+}
