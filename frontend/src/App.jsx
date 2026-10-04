@@ -1,3 +1,4 @@
+
 import { Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
@@ -20,8 +21,10 @@ const App = () => {
   return (
     <div className="app-container">
 
+      {/* Navigation Bar */}
       <Navbar />
 
+      {/* Main Page Content */}
       <main className="main-content">
         <Routes>
 
@@ -38,7 +41,7 @@ const App = () => {
             element={<StudyMaterial />}
           />
 
-          {/* Admin */}
+          {/* Admin Pages */}
           <Route
             path="/admin/login"
             element={<AdminLogin />}
@@ -52,6 +55,7 @@ const App = () => {
         </Routes>
       </main>
 
+      {/* Footer appears on every page */}
       <Footer />
 
     </div>
@@ -59,3 +63,4 @@ const App = () => {
 };
 
 export default App;
+
