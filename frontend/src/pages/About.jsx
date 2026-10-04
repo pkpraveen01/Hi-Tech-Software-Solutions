@@ -100,7 +100,7 @@ const About = () => {
           <div className="about-image">
 
             <img
-              src="/praveen-kumar.jpg"
+              src="/praveen-kumar.png"
               alt="Praveen Kumar - Software Engineer and Educator"
             />
 
