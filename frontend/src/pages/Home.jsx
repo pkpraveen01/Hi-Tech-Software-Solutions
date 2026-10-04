@@ -35,23 +35,38 @@ const Home = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  return (
-    <section className="home-section">
-      <div className="overlay">
-        <div className="home-content">
-          <h1 className="home-title" ref={titleRef}></h1>
-          <p className="home-subtitle">
-            Powering businesses through full-stack web and mobile app development.
-          </p>
-          {/* <a href="/contact" className="home-button">Let's Talk</a> */}
-        </div>
-        {/* Floating SVG shapes */}
-        <div className="floating-shapes">
-          <span className="circle"></span>
-          <span className="triangle"></span>
-          <span className="square"></span>
-        </div>
+
+return (
+  <section className="home-section">
+    <div className="overlay">
+      <div className="home-content">
+
+        <h1 className="home-title" ref={titleRef}></h1>
+
+        <p className="home-subtitle">
+          Powering businesses through full-stack web and mobile app development.
+        </p>
+
+        <p className="developer-name">
+          <span>Er. Praveen Kumar</span>
+        </p>
+
+        {/* <a href="/contact" className="home-button">Let's Talk</a> */}
+
       </div>
+
+      {/* Floating SVG shapes */}
+      <div className="floating-shapes">
+        <span className="circle"></span>
+        <span className="triangle"></span>
+        <span className="square"></span>
+      </div>
+
+    </div>
+  </section>
+);
+
+
 
       {/* Achievements */}
       <div className="section achievements" data-aos="fade-up">
